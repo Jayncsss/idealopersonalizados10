@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Redes Sociales</title>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="X39XEJHx"></script>
+    <div class="container">
+                <!-- Sidebar Section -->
+                <aside>
+                    <div class="toggle">
+                        <div class="logo">
+        <!--                     <img src="images/logo.png"> -->
+                            <h2 style="font-size: 1.6rem;">Idealo<span class="danger"> <br>Personalizados</span></h2>
+                        </div>
+                        <div class="close" id="close-btn">
+                            <span class="material-icons-sharp">
+                                close
+                            </span>
+                        </div>
+                    </div>
+        
+                    <div class="sidebar">
+                        <a href="#" class="underline-link">
+                            <span class="material-icons-sharp">bookmark_outline</span>
+                            <h3>Marcador</h3>
+                            <span class="line"></span>
+                        </a>
+                        
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                dashboard
+                            </span>
+                            <h3>Espacios de trabajo</h3>
+                        </a>
+                        <a href="#" id="gmail-link">
+                            <span class="material-icons-sharp">assignment</span>
+                            <h3 class="openn">CRM</h3>
+                            <span class="message-count">27</span>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                person_outline
+                            </span>
+                            <h3>Clientes interesados</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                person_outline
+                            </span>
+                            <h3>Clientes <br> con foto</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                person_outline
+                            </span>
+                            <h3>Clientes <br> pendientes</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                person_outline
+                            </span>
+                            <h3>Clientes <br> ganados</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                receipt_long
+                            </span>
+                            <h3>Historial</h3>
+                        </a>
+                        <a href="#" class="active">
+                            <span class="material-icons-sharp">
+                                insights
+                            </span>
+                            <h3>Estadisticas</h3>
+                        </a>
+        
+                        
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                inventory
+                            </span>
+                            <h3>Calendario</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                report_gmailerrorred
+                            </span>
+                            <h3>Perdidos</h3>
+                        </a>
+        <!--                 <a href="#">
+                            <span class="material-icons-sharp">
+                                settings
+                            </span>
+                            <h3>Configuracion</h3>
+                        </a> -->
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                add
+                            </span>
+                            <h3>New Login</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">
+                                logout
+                            </span>
+                            <h3>Iniciar sesion</h3>
+                        </a>
+                    </div>
+                    <div class="menu underline-link" id="gmail-menu">
+                        <!-- Contenido del menú desplegable -->
+                        <h2>Funciones rapidas</h2>
+                        <a href="#">Contactos</a>
+                        <a href="#">Empresas</a>
+                        <a href="#">Negocios</a>
+                        <a href="#">Tickets</a>
+        <!--                 <span style="top: 16.7rem; background-color: black;" class="line"></span> -->
+                        <a href="#">Listas</a>
+                        <a href="#">Bandeja de entrada</a>
+                        <a href="#">Llamadas</a>
+                        <a href="#">tareas</a>
+                        <!-- Añade más contenido según sea necesario -->
+                    </div>
+                    
+                    <script>
+                        // Función para abrir y cerrar el menú
+                        function toggleMenu(event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            var menu = document.getElementById('gmail-menu');
+                            menu.classList.toggle('open');
+                        }
+                
+                        // Añadir evento de click al enlace de Gmail
+                        var gmailLink = document.getElementById('gmail-link');
+                        gmailLink.addEventListener('click', toggleMenu);
+                
+                        // Para cerrar el menú al hacer clic fuera de él
+                        document.addEventListener('click', function(event) {
+                            var menu = document.getElementById('gmail-menu');
+                            var link = document.getElementById('gmail-link');
+                            if (!menu.contains(event.target) && !link.contains(event.target)) {
+                                menu.classList.remove('open');
+                            }
+                        });
+                
+                        // Evitar que el clic dentro del menú cierre el menú
+                        document.getElementById('gmail-menu').addEventListener('click', function(event) {
+                            event.stopPropagation();
+                        });
+                    </script>
+                </aside>
+                <!-- End of Sidebar Section -->
+
+
+
+
+
+
+                 <!-- Main Content -->
+        <main style="margin-top: 1.4rem;">
+            <h1 style="display: flex; align-items: center; justify-content: center;">¡Hola!</h1>
+            <!-- Analyses -->
+            <!-- <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Sales</h3>
+                            <h1>$65,024</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Site Visit</h3>
+                            <h1>24,981</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-48%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Searches</h3>
+                            <h1>14,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- End of Analyses -->
+
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h2>Nuevos usuarios</h2>
+                <div class="user-list">
+                    <!-- <div class="user">
+                        <img src="images/profile-2.jpg">
+                        <h2>Jack</h2>
+                        <p>54 Min Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-3.jpg">
+                        <h2>Amir</h2>
+                        <p>3 Hours Ago</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-4.jpg">
+                        <h2>Ember</h2>
+                        <p>6 Hours Ago</p>
+                    </div> -->
+                    <div class="user">
+                        <img src="images/plus.png">
+                        <h2>Crear</h2>
+                        <p>Nuevo usuario</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+
+            <div class="new-users">
+                <h2>Redes Sociales</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <a href="#whatsapp"><img src="images/whatsapp.png">
+                        <h2>Whatsapp</a></h2>
+                        <p>Comienza a recibir conversaciones de WhatsApp.</p>
+                    </div>
+                    <div class="user">
+                        <a href="#instagram"><img src="images/instagram.png">
+                        <h2>Instagram</a></h2>
+                        <p>Comienza a recibir conversaciones de Instagram.</p>
+                    </div>
+                    <div class="user">
+                        <a href="#facebook"><img src="images/messenger.png">
+                        <h2>Facebook</a></h2>
+                        <p>Comienza a recibir conversaciones de Messenger y crea chatbots en tu bandeja de entrada</p>
+                    </div>
+                </div>
+            </div>
+             <!-- redes -->
+             <div class="new-users">
+                <h2>App Chat</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <div class="app-container">
+                            <aside class="sidebar2">
+                                <div class="sidebar-header">
+                                    <h2>Chat App</h2>
+                                </div>
+                                <ul class="nav-menu">
+                                    <li class="nav-item" onclick="showSection('home')">Entradas</li>
+                                    <li class="nav-item" onclick="showSection('whatsapp')">WhatsApp</li>
+                                    <li class="nav-item" onclick="showSection('facebook')">Facebook Messenger</li>
+                                    <li class="nav-item" onclick="showSection('instagram')">Instagram</li>
+                                </ul>
+                            </aside>
+                            <main class="main-content">
+                                <header class="main-header">
+                                    <h2 id="chat-title">¡Bienvenido!</h2>
+                                </header>
+                                <section id="home" class="chat-section active">
+                                    <h2>Buzón de Mensajes</h2>
+                                    <p>Aqui se mostraran los mensajes nuevos.</p>
+                                </section>
+                                <section id="whatsapp" class="chat-section">
+                                    <iframe src="https://web.whatsapp.com/" class="chat-frame"></iframe>
+                                </section>
+                                <section id="facebook" class="chat-section">
+                                    <iframe src="https://www.messenger.com/" class="chat-frame"></iframe>
+                                </section>
+                                <section id="instagram" class="chat-section">
+                                    <iframe src="https://www.instagram.com/direct/inbox/" class="chat-frame"></iframe>
+                                </section>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- end -->
+
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Ordenes recientes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Numero</th>
+                            <th>Pago/abono</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>hola, <b>IdeaLo</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/idealo.jpeg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+<!--             <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>AsmrProg</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div> -->
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Tareas</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Compras</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>tienda</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add tarea</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+    <script src="orders.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
